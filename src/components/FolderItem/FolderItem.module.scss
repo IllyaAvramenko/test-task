@@ -1,0 +1,35 @@
+.folder__item {
+   display: flex;
+   justify-content: flex-start;
+
+   width: 85px;
+
+   padding: 0.3rem 0.5rem;
+   margin: 0.5rem 0.3rem;
+
+   &:hover {
+      background-color: #e5f3ff;
+   }
+   
+   &_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &_top {
+      width: 100%;
+      img {
+         width: 100%;
+      }
+   }
+
+   &_bottom {
+
+      p {
+         margin-block-start: 0em;
+         margin-block-end: 0em;
+      }
+   }
+}

@@ -1,0 +1,40 @@
+
+.file__item {
+   width: 85px;
+   height: 105px;
+   overflow: hidden;
+
+   padding: 0.3rem 0.5rem;
+   margin: 0.5rem 0.3rem;
+
+   &:hover {
+      background-color: #e5f3ff;
+   }
+
+   &:checked {
+      overflow: auto;
+   }
+
+   &_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &_top {
+      width: 100%;
+      img {
+         width: 85px;
+      }
+   }
+
+   &_bottom {
+
+      p {
+         text-align: center;
+         font-size: 0.8rem;
+         margin: 0;
+      }
+   }
+}
