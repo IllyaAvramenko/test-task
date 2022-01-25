@@ -1,7 +1,7 @@
-import React, { FC, useEffect } from "react"
+import React, { FC, useEffect, ChangeEvent } from "react"
 import s from './Folder.module.scss'
 
-import { useHistory, useParams } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
 import { FileType } from "../../api/api"
@@ -43,12 +43,12 @@ const Folder: FC = () => {
       history.goBack()
    } 
    
-   const onFilterChange = (e: any) => {
+   const onFilterChange = (e: ChangeEvent<HTMLInputElement>) => {
       const { target: { value } } = e
       dispatch(actions.setSortCurrentFolder(value))
    }
 
-   const setSortOrder = (e: any) => {
+   const setSortOrder = (e: ChangeEvent<HTMLInputElement>) => {
       const { target: { value } } = e
       dispatch(actions.setSortCurrentFolder(null, value))
    }
@@ -63,7 +63,7 @@ const Folder: FC = () => {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
                <Arrow goBack={goBack} />
             </div>
-            <div style={{ display: 'flex',  }}>
+            <div style={{ display: 'flex' }}>
                <div style={{margin: '0.4rem'}} >
                   <CustomLabel for={'sortkey-select'}> Sort by key </CustomLabel>
                   <CustomSelect 
